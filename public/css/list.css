@@ -1,0 +1,55 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 50px;
+    color: rgb(224, 177, 107);
+    background-color: slategrey;
+  }
+
+  .header{
+    background-color: darkcyan;
+    color: black;
+  }
+  
+  .l{
+    background: url("../images/employees2.jpg") repeat scroll center center / cover;
+    height: 200vh;
+    width: 100%;               
+  }
+  
+  td, th {
+    
+    text-align: left;
+    padding: 8px;
+  }
+  
+  a{
+    width: 100%;
+    /* background-color: #53ac71; */
+    color: rgb(23, 221, 235);
+    padding: 2px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  h2{
+      margin-top: 40px;
+      margin-left: 50px;
+  }
+  /* .add{
+      margin-left: 250px;
+      color: rgb(3, 3, 3);
+  } */
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .insert{
+    color: rgb(231, 136, 12);
+    background-color: rgb(83, 45, 45);
+  
+  }

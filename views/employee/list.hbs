@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of employees</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" 
+    integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- public/libraries CSS Files -->
+  <link href="public/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="public/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="public/lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="public/lib/hover/hover.min.css" rel="stylesheet">
+
+  
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/public/images/titlicon1.PNG">
+  
+  <link rel="stylesheet" href="/public/css/list.css">
+
+</head>
+<body class="l">
+
+<h2> <a href="/employee"><i class="fas fa-user-plus me-1 "></i></a><b class="insert">list of employees:</b></h2>
+
+<table>
+  <tr class="header">
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>City</th>
+    <th></th>
+  </tr>
+  <tbody>
+    {{#each list}}
+    <tr>
+      <td>{{this.fullName}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.mobile}}</td>
+      <td>{{this.city}}</td>
+      <td>
+        <a href="/employee/{{this._id}}"><i class="fas fa-edit fa-lg mx-1 btn btn-info" aria-hidden="true"></i></a>
+        <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');"><i class="fa fa-trash fa-lg mx-1 btn btn-danger" aria-hidden="true"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js" 
+  integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Apr 2019 03:51:22 GMT -->
+</html>

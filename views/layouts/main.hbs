@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registrations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" 
+    integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/public/css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- public/libraries CSS Files -->
+  <link href="public/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="public/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="public/lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="public/lib/hover/hover.min.css" rel="stylesheet">
+
+  
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/public/images/titlicon1.PNG">
+
+</head>
+<body class="m">
+
+<div class="container">
+  <h1 class="insert">{{viewTitle}}</h1>
+
+  <form action="/employee" method="POST" class="was-validated">
+  <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group" style="padding-top: 5px;">
+      <label for="name"><b>Fullname:</b></label>
+      <input type="text" class="form-control" id="name" placeholder="Full Name" name="fullName" required>
+    </div>
+    <div class="form-group" >
+      <label for="email"><b>Email:</b> </label>
+      <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="{{employee.email}}" required>
+      <div class="text-danger">
+        {{employee.emailError}}
+      </div>
+    </div>
+    <div class="form-group" >
+        <label for="mobile"><b>Mobile:</b></label>
+        <input type="text" class="form-control" id="mobile" placeholder="Mobile" name="mobile" value="{{employee.mobile}}" required>
+        <label for="mobile"><b>City:</b></label>
+        <input type="text" class="form-control" id="city" placeholder="City" name="city" value="{{employee.city}}" required>
+      </div>
+    <div >
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/employee/list" class="btn btn-secondary" ><i class="fas fa-database"></i></a>
+    </div>
+    
+  </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js" 
+  integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_validation_was&stacked=h by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Apr 2019 02:44:41 GMT -->
+</html>
